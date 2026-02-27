@@ -293,34 +293,6 @@
             z-index: 1;
         }
 
-        .builders-banner {
-            max-width: 900px;
-            margin: 0 auto 4rem;
-            padding: 2.5rem;
-            background: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 1;
-        }
-
-        .builders-banner::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
-            border-radius: 22px;
-            z-index: -1;
-            opacity: 0.3;
-        }
-
-        .builders-main-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-        }
-
         .builders-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -765,9 +737,6 @@
     <section class="builders">
         <h2>7 Award-Winning Builders</h2>
         <p class="builders-subtitle">GTA's most trusted names in homebuilding, united for Union Glen</p>
-        <div class="builders-banner">
-            <img src="builders.jpg" alt="Union Glen Builders - Arista, Deco, Opus" class="builders-main-image">
-        </div>
         <div class="builders-grid">
             <div class="builder-logo-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                 <img src="arista-logo.png" alt="Arista Homes" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:white; font-weight:bold;\'>ARISTA</span>';">
