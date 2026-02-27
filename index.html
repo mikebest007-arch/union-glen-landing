@@ -560,32 +560,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: linear-gradient(135deg, #1a2634 0%, #2d3a4f 100%);
-            padding: 1.5rem 2.5rem;
+            background: #1a2634;
+            padding: 0;
             border-radius: 12px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
             border: 2px solid var(--gold);
+            overflow: hidden;
+            max-width: 350px;
+            margin: 0 auto;
         }
 
         .condos-union-logo svg {
-            width: 200px;
+            width: 100%;
             height: auto;
+            display: block;
         }
 
         .condos-union-logo-small {
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            background: linear-gradient(135deg, #1a2634 0%, #2d3a4f 100%);
-            padding: 1rem 1.5rem;
+            background: #1a2634;
+            padding: 0;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             border: 1.5px solid var(--gold);
+            overflow: hidden;
+            max-width: 250px;
+            margin: 0 auto;
         }
 
         .condos-union-logo-small svg {
-            width: 150px;
+            width: 100%;
             height: auto;
+            display: block;
         }
 
         .condos-union-logo-img img,
@@ -695,56 +703,47 @@
         <img src="hero.jpg" alt="Union Glen Townhomes" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="condos-union-logo-img" style="margin-bottom: 2rem;">
-                <img src="condos-union-official.png" alt="Condos Union Realty Inc. Brokerage" style="max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);">
-            </div>
-            
-            <!-- Fallback SVG if image not found -->
-            <div class="condos-union-logo" style="margin-bottom: 2rem; display: none;">
-                <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Background -->
-                    <defs>
-                        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#1a2634"/>
-                            <stop offset="100%" style="stop-color:#2d3a4f"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="300" height="220" fill="url(#bgGrad)"/>
+            <div class="condos-union-logo" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dark Navy Background -->
+                    <rect width="400" height="280" fill="#1a2634"/>
                     
-                    <!-- Horizontal Lines -->
-                    <line x1="30" y1="85" x2="120" y2="85" stroke="#C9A962" stroke-width="1.5"/>
-                    <line x1="180" y1="85" x2="270" y2="85" stroke="#C9A962" stroke-width="1.5"/>
+                    <!-- Left Horizontal Line -->
+                    <line x1="40" y1="120" x2="160" y2="120" stroke="#C9A962" stroke-width="2"/>
+                    
+                    <!-- Right Horizontal Line -->
+                    <line x1="240" y1="120" x2="360" y2="120" stroke="#C9A962" stroke-width="2"/>
                     
                     <!-- CN Tower -->
-                    <g transform="translate(150, 95)">
-                        <!-- Spire/Antenna -->
-                        <line x1="0" y1="-75" x2="0" y2="-55" stroke="#C9A962" stroke-width="1.5"/>
+                    <g transform="translate(200, 110)">
+                        <!-- Antenna -->
+                        <line x1="0" y1="-95" x2="0" y2="-75" stroke="#C9A962" stroke-width="2"/>
                         
-                        <!-- Upper Pod -->
-                        <ellipse cx="0" cy="-45" rx="6" ry="4" fill="none" stroke="#C9A962" stroke-width="1.5"/>
+                        <!-- Top Pod -->
+                        <ellipse cx="0" cy="-65" rx="8" ry="5" fill="none" stroke="#C9A962" stroke-width="2"/>
                         
                         <!-- Main Pod (SkyPod) -->
-                        <ellipse cx="0" cy="-25" rx="14" ry="10" fill="none" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="-14" y1="-25" x2="14" y2="-25" stroke="#C9A962" stroke-width="1.5"/>
+                        <ellipse cx="0" cy="-40" rx="18" ry="12" fill="none" stroke="#C9A962" stroke-width="2"/>
+                        <line x1="-18" y1="-40" x2="18" y2="-40" stroke="#C9A962" stroke-width="2"/>
                         
                         <!-- Tower Shaft -->
-                        <line x1="-4" y1="-15" x2="-2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="4" y1="-15" x2="2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
+                        <line x1="-5" y1="-28" x2="-3" y2="50" stroke="#C9A962" stroke-width="2"/>
+                        <line x1="5" y1="-28" x2="3" y2="50" stroke="#C9A962" stroke-width="2"/>
+                        
+                        <!-- Vertical lines on shaft -->
+                        <line x1="0" y1="-65" x2="0" y2="-40" stroke="#C9A962" stroke-width="1.5"/>
+                        <line x1="0" y1="-28" x2="0" y2="50" stroke="#C9A962" stroke-width="1.5"/>
                         
                         <!-- Base -->
-                        <line x1="-12" y1="35" x2="12" y2="35" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="-10" y1="40" x2="10" y2="40" stroke="#C9A962" stroke-width="1.5"/>
-                        
-                        <!-- Internal lines for detail -->
-                        <line x1="0" y1="-45" x2="0" y2="-35" stroke="#C9A962" stroke-width="1"/>
-                        <line x1="0" y1="-15" x2="0" y2="35" stroke="#C9A962" stroke-width="1"/>
+                        <line x1="-15" y1="50" x2="15" y2="50" stroke="#C9A962" stroke-width="2"/>
+                        <line x1="-12" y1="58" x2="12" y2="58" stroke="#C9A962" stroke-width="2"/>
                     </g>
                     
                     <!-- CONDOS UNION Text -->
-                    <text x="150" y="160" font-family="'Playfair Display', serif" font-size="26" font-weight="400" fill="#FFFFFF" text-anchor="middle" letter-spacing="4" style="font-variant: small-caps;">CONDOS UNION</text>
+                    <text x="200" y="195" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="36" font-weight="400" fill="#FFFFFF" text-anchor="middle" letter-spacing="6" style="font-variant: small-caps;">CONDOS UNION</text>
                     
                     <!-- Realty Inc. Brokerage Text -->
-                    <text x="150" y="185" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="#C9A962" text-anchor="middle" letter-spacing="2" style="font-style: italic;">Realty Inc. Brokerage</text>
+                    <text x="200" y="225" font-family="'Cormorant Garamond', 'Inter', serif" font-size="18" font-weight="400" fill="#C9A962" text-anchor="middle" letter-spacing="3" style="font-style: italic;">Realty Inc. Brokerage</text>
                 </svg>
             </div>
             
@@ -886,36 +885,47 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="condos-union-logo-img-small" style="margin-bottom: 2rem;">
-                <img src="condos-union-official.png" alt="Condos Union Realty Inc. Brokerage" style="max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-            </div>
-            
-            <!-- Fallback SVG if image not found -->
-            <div class="condos-union-logo-small" style="margin-bottom: 2rem; display: none;">
-                <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#1a2634"/>
-                            <stop offset="100%" style="stop-color:#2d3a4f"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="300" height="220" fill="url(#bgGrad2)"/>
+            <div class="condos-union-logo-small" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dark Navy Background -->
+                    <rect width="300" height="200" fill="#1a2634"/>
+                    
+                    <!-- Left Horizontal Line -->
                     <line x1="30" y1="85" x2="120" y2="85" stroke="#C9A962" stroke-width="1.5"/>
+                    
+                    <!-- Right Horizontal Line -->
                     <line x1="180" y1="85" x2="270" y2="85" stroke="#C9A962" stroke-width="1.5"/>
-                    <g transform="translate(150, 95)">
-                        <line x1="0" y1="-75" x2="0" y2="-55" stroke="#C9A962" stroke-width="1.5"/>
-                        <ellipse cx="0" cy="-45" rx="6" ry="4" fill="none" stroke="#C9A962" stroke-width="1.5"/>
-                        <ellipse cx="0" cy="-25" rx="14" ry="10" fill="none" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="-14" y1="-25" x2="14" y2="-25" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="-4" y1="-15" x2="-2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="4" y1="-15" x2="2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
+                    
+                    <!-- CN Tower -->
+                    <g transform="translate(150, 85)">
+                        <!-- Antenna -->
+                        <line x1="0" y1="-70" x2="0" y2="-55" stroke="#C9A962" stroke-width="1.5"/>
+                        
+                        <!-- Top Pod -->
+                        <ellipse cx="0" cy="-50" rx="6" ry="4" fill="none" stroke="#C9A962" stroke-width="1.5"/>
+                        
+                        <!-- Main Pod (SkyPod) -->
+                        <ellipse cx="0" cy="-30" rx="14" ry="9" fill="none" stroke="#C9A962" stroke-width="1.5"/>
+                        <line x1="-14" y1="-30" x2="14" y2="-30" stroke="#C9A962" stroke-width="1.5"/>
+                        
+                        <!-- Tower Shaft -->
+                        <line x1="-4" y1="-21" x2="-2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
+                        <line x1="4" y1="-21" x2="2" y2="35" stroke="#C9A962" stroke-width="1.5"/>
+                        
+                        <!-- Vertical lines on shaft -->
+                        <line x1="0" y1="-50" x2="0" y2="-30" stroke="#C9A962" stroke-width="1"/>
+                        <line x1="0" y1="-21" x2="0" y2="35" stroke="#C9A962" stroke-width="1"/>
+                        
+                        <!-- Base -->
                         <line x1="-12" y1="35" x2="12" y2="35" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="-10" y1="40" x2="10" y2="40" stroke="#C9A962" stroke-width="1.5"/>
-                        <line x1="0" y1="-45" x2="0" y2="-35" stroke="#C9A962" stroke-width="1"/>
-                        <line x1="0" y1="-15" x2="0" y2="35" stroke="#C9A962" stroke-width="1"/>
+                        <line x1="-10" y1="42" x2="10" y2="42" stroke="#C9A962" stroke-width="1.5"/>
                     </g>
-                    <text x="150" y="160" font-family="'Playfair Display', serif" font-size="26" font-weight="400" fill="#FFFFFF" text-anchor="middle" letter-spacing="4" style="font-variant: small-caps;">CONDOS UNION</text>
-                    <text x="150" y="185" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="#C9A962" text-anchor="middle" letter-spacing="2" style="font-style: italic;">Realty Inc. Brokerage</text>
+                    
+                    <!-- CONDOS UNION Text -->
+                    <text x="150" y="145" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="22" font-weight="400" fill="#FFFFFF" text-anchor="middle" letter-spacing="4" style="font-variant: small-caps;">CONDOS UNION</text>
+                    
+                    <!-- Realty Inc. Brokerage Text -->
+                    <text x="150" y="168" font-family="'Cormorant Garamond', 'Inter', serif" font-size="12" font-weight="400" fill="#C9A962" text-anchor="middle" letter-spacing="2" style="font-style: italic;">Realty Inc. Brokerage</text>
                 </svg>
             </div>
             <div class="footer-contact">
