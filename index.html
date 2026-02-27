@@ -278,15 +278,40 @@
             margin-bottom: 3rem;
         }
 
-        .builders-logos {
+        .builders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
+            padding: 2rem;
         }
 
-        .builders-logos img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
+        .builder-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .builder-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .builder-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .builder-name {
+            font-size: 0.85rem;
+            color: #666;
         }
 
         /* Footer CTA */
@@ -610,8 +635,35 @@
     <!-- Builders -->
     <section class="builders">
         <h2>7 Award-Winning Builders</h2>
-        <div class="builders-logos">
-            <img src="builders.jpg" alt="Union Glen Builders - Arista, Deco, Fieldgate, Greenpark, Madison, Opus, State Homes">
+        <div class="builders-grid">
+            <div class="builder-item">
+                <div class="builder-logo">ARISTA</div>
+                <span class="builder-name">Arista Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">DECO</div>
+                <span class="builder-name">Deco Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">FIELDGATE</div>
+                <span class="builder-name">Fieldgate Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">GREENPARK</div>
+                <span class="builder-name">Greenpark Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">MADISON</div>
+                <span class="builder-name">Madison Group</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">OPUS</div>
+                <span class="builder-name">Opus Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo">STATE</div>
+                <span class="builder-name">State Building Group</span>
+            </div>
         </div>
     </section>
 
