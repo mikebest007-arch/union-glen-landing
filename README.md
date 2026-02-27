@@ -41,3 +41,4 @@ Backup current site, then upload these files to replace it.
 - Floor plan PDFs linked from unionglen.ca/adobroker/
 - All images optimized for web
 - Compatible with all modern browsers
+# Custom domain config
