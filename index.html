@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Glen | Unionville's Grand Vision Community | Condos Union Realty</title>
+    <meta name="description" content="Limited release of freehold townhomes coming early 2026. Kennedy & Major Mackenzie, Markham. Register now for VIP access.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Union Glen | Unionville's Grand Vision Community">
+    <meta property="og:description" content="Limited release of freehold townhomes coming early 2026. Register now for VIP access.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="EXTERIORS FINAL/Deco_B03_ELV A_22'.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E5D5A8;
+            --dark: #1A1A1A;
+            --charcoal: #2D2D2D;
+            --cream: #F8F6F1;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 120px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-location {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-location::before {
+            content: "📍 ";
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
+        }
+
+        .cta-button:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 98, 0.5);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Townhome Types Section */
+        .townhomes {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .townhome-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .townhome-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .townhome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .townhome-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .townhome-content {
+            padding: 1.5rem;
+        }
+
+        .townhome-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .townhome-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            color: var(--dark);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: #666;
+        }
+
+        /* Builders Section */
+        .builders {
+            padding: 5rem 2rem;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .builders h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+        }
+
+        .builders-logos {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .builders-logos img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 5rem 2rem;
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero.jpg" alt="Union Glen Townhomes" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <img src="condos-union-logo.jpg" alt="Condos Union Realty Inc." style="height: 50px; width: auto; opacity: 0.95; filter: brightness(0) invert(1);">
+                <div style="width: 60px; height: 2px; background: var(--gold);"></div>
+            </div>
+            <img src="logo.jpg" alt="Union Glen" class="hero-logo">
+            <p class="hero-subtitle">Coming Early 2026</p>
+            <h1>Union Glen</h1>
+            <p class="hero-location">Kennedy & Major Mackenzie, Markham</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Freehold Townhomes in Unionville's Grand Vision Community</p>
+            <a href="#register" class="cta-button">Register Now</a>
+        </div>
+        <div class="scroll-indicator">Scroll to explore ↓</div>
+    </section>
+
+    <!-- Townhome Types -->
+    <section class="townhomes">
+        <div class="section-header">
+            <h2>Four Distinct Townhome Collections</h2>
+            <p>Choose from four unique townhome styles, each designed for modern living with timeless elegance</p>
+        </div>
+        <div class="townhome-grid">
+            <div class="townhome-card">
+                <img src="classic.jpg" alt="Classic Towns">
+                <div class="townhome-content">
+                    <h3>Classic Towns</h3>
+                    <p>Traditional elegance with modern amenities. Perfect for families seeking space and style.</p>
+                    <a href="/files/adobroker/classic-towns-fp.pdf" class="download-btn" target="_blank">
+                        📄 Download Floor Plans
+                    </a>
+                </div>
+            </div>
+            <div class="townhome-card">
+                <img src="tandem.jpg" alt="Tandem Garage Laneway">
+                <div class="townhome-content">
+                    <h3>Tandem Garage Laneway</h3>
+                    <p>Smart design maximizing space with rear laneway access and tandem parking.</p>
+                    <a href="/files/adobroker/tandem-garage-laneway-fp.pdf" class="download-btn" target="_blank">
+                        📄 Download Floor Plans
+                    </a>
+                </div>
+            </div>
+            <div class="townhome-card">
+                <img src="double.jpg" alt="Double Garage Laneway">
+                <div class="townhome-content">
+                    <h3>Double Garage Laneway</h3>
+                    <p>Premium homes with double garage access and expansive living spaces.</p>
+                    <a href="/files/adobroker/double-garage-laneway-fp.pdf" class="download-btn" target="_blank">
+                        📄 Download Floor Plans
+                    </a>
+                </div>
+            </div>
+            <div class="townhome-card">
+                <img src="courtyard.jpg" alt="Courtyard Towns">
+                <div class="townhome-content">
+                    <h3>Courtyard Towns</h3>
+                    <p>Intimate community living with private courtyards and serene outdoor spaces.</p>
+                    <a href="/files/adobroker/courtyard-towns-fp.pdf" class="download-btn" target="_blank">
+                        📄 Download Floor Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="section-header">
+            <h2>Why Union Glen?</h2>
+            <p>Experience the perfect blend of luxury, location, and lifestyle</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🏡</div>
+                <h3>Freehold Ownership</h3>
+                <p>Own your piece of Unionville with no condo fees and complete autonomy</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🏗️</div>
+                <h3>7 Award-Winning Builders</h3>
+                <p>GTA's most trusted builders collaborating on one prestigious community</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌳</div>
+                <h3>Parks & Greenspace</h3>
+                <p>Beautifully planned outdoor amenities throughout the community</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚗</div>
+                <h3>Prime Location</h3>
+                <p>Steps from top schools, restaurants, shopping, and transit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Builders -->
+    <section class="builders">
+        <h2>7 Award-Winning Builders</h2>
+        <div class="builders-logos">
+            <img src="builders.jpg" alt="Union Glen Builders - Arista, Deco, Fieldgate, Greenpark, Madison, Opus, State Homes">
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta" id="register">
+        <h2>Secure Your Place at Union Glen</h2>
+        <p>Register now for VIP access to floor plans, pricing, and priority selection</p>
+        <a href="mailto:info@condosunion.com" class="cta-button">Register Now</a>
+        
+        <div class="contact-info">
+            <a href="https://wa.me/16479678233" class="contact-item" target="_blank">
+                💬 WhatsApp: +1 (647) 967-8233
+            </a>
+            <a href="mailto:info@condosunion.com" class="contact-item">
+                ✉️ info@condosunion.com
+            </a>
+        </div>
+        
+        <div style="margin-top: 3rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <img src="condos-union-logo.jpg" alt="Condos Union Realty Inc." style="height: 60px; width: auto; opacity: 0.9;">
+            <p style="font-size: 0.9rem; opacity: 0.6;">
+                © 2026 Union Glen | Condos Union Realty Inc., Brokerage | All renderings are artist concept
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
