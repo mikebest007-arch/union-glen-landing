@@ -310,111 +310,40 @@
         .builders-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 1rem;
+            gap: 1.5rem;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 1rem;
             position: relative;
             z-index: 1;
+            align-items: center;
         }
 
-        .builder-item {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .builder-logo-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid transparent;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            min-height: 100px;
+            border: 2px solid transparent;
         }
 
-        .builder-item:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        .builder-logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-color: var(--gold);
         }
 
-        /* Individual Builder Brand Colors */
-        .builder-arista {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #764ba2;
-        }
-
-        .builder-deco {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            border-color: #f5576c;
-        }
-
-        .builder-fieldgate {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-            border-color: #00f2fe;
-        }
-
-        .builder-greenpark {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            color: #1a1a1a;
-            border-color: #38f9d7;
-        }
-
-        .builder-madison {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            color: #1a1a1a;
-            border-color: #fee140;
-        }
-
-        .builder-opus {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            color: #1a1a1a;
-            border-color: #fed6e3;
-        }
-
-        .builder-state {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
-            color: #1a1a1a;
-            border-color: #ff9a9e;
-        }
-
-        .builder-logo-icon {
-            font-size: 3rem;
-            margin-bottom: 0.75rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .builder-logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .builder-name {
-            font-size: 0.8rem;
-            font-weight: 500;
-            opacity: 0.9;
-        }
-
-        .builder-tag {
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            background: var(--gold);
-            color: var(--dark);
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0 16px 0 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .builder-logo-item img {
+            max-width: 100%;
+            max-height: 60px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
 
         @media (max-width: 1200px) {
@@ -431,17 +360,13 @@
                 padding: 0 0.5rem;
             }
 
-            .builder-item {
-                min-height: 160px;
-                padding: 1.5rem 1rem;
+            .builder-logo-item {
+                min-height: 80px;
+                padding: 1rem;
             }
 
-            .builder-logo-icon {
-                font-size: 2.5rem;
-            }
-
-            .builder-logo-text {
-                font-size: 0.9rem;
+            .builder-logo-item img {
+                max-height: 50px;
             }
         }
 
@@ -877,43 +802,26 @@
             <img src="builders.jpg" alt="Union Glen Builders - Arista, Deco, Opus" class="builders-main-image">
         </div>
         <div class="builders-grid">
-            <div class="builder-item builder-arista">
-                <span class="builder-tag">Featured</span>
-                <div class="builder-logo-icon">🏛️</div>
-                <div class="builder-logo-text">ARISTA</div>
-                <span class="builder-name">Arista Homes</span>
+            <div class="builder-logo-item">
+                <img src="arista-logo.png" alt="Arista Homes">
             </div>
-            <div class="builder-item builder-deco">
-                <span class="builder-tag">Featured</span>
-                <div class="builder-logo-icon">✨</div>
-                <div class="builder-logo-text">DECO</div>
-                <span class="builder-name">Deco Homes</span>
+            <div class="builder-logo-item">
+                <img src="deco-logo.png" alt="Deco Homes">
             </div>
-            <div class="builder-item builder-fieldgate">
-                <div class="builder-logo-icon">🏘️</div>
-                <div class="builder-logo-text">FIELDGATE</div>
-                <span class="builder-name">Fieldgate Homes</span>
+            <div class="builder-logo-item">
+                <img src="fieldgate-logo.png" alt="Fieldgate Homes">
             </div>
-            <div class="builder-item builder-greenpark">
-                <div class="builder-logo-icon">🌿</div>
-                <div class="builder-logo-text">GREENPARK</div>
-                <span class="builder-name">Greenpark Homes</span>
+            <div class="builder-logo-item">
+                <img src="greenpark-logo.png" alt="Greenpark Homes">
             </div>
-            <div class="builder-item builder-madison">
-                <div class="builder-logo-icon">🏢</div>
-                <div class="builder-logo-text">MADISON</div>
-                <span class="builder-name">Madison Group</span>
+            <div class="builder-logo-item">
+                <img src="madison-logo.png" alt="Madison Group">
             </div>
-            <div class="builder-item builder-opus">
-                <span class="builder-tag">Featured</span>
-                <div class="builder-logo-icon">🎨</div>
-                <div class="builder-logo-text">OPUS</div>
-                <span class="builder-name">Opus Homes</span>
+            <div class="builder-logo-item">
+                <img src="opus-logo.png" alt="Opus Homes">
             </div>
-            <div class="builder-item builder-state">
-                <div class="builder-logo-icon">🏗️</div>
-                <div class="builder-logo-text">STATE</div>
-                <span class="builder-name">State Building Group</span>
+            <div class="builder-logo-item">
+                <img src="state-logo.png" alt="State Building Group">
             </div>
         </div>
     </section>
