@@ -561,6 +561,120 @@
             text-align: center;
         }
 
+        /* Floor Plans Section */
+        .floorplans {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .floorplans-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .floorplan-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            min-height: 280px;
+        }
+
+        .floorplan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .floorplan-preview {
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .floorplan-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .floorplan-preview h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .floorplan-preview p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .floorplan-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 38, 52, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 1.5rem;
+        }
+
+        .floorplan-card:hover .floorplan-overlay {
+            opacity: 1;
+        }
+
+        .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .lock-text {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .unlock-btn {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .unlock-btn:hover {
+            background: var(--gold-light);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .floorplans-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floorplans-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .footer-logo {
             height: 80px;
             width: auto;
@@ -662,12 +776,19 @@
         <img src="hero.jpg" alt="Union Glen Townhomes" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div style="width: 80px; height: 2px; background: var(--gold); margin: 0 auto 2rem;"></div>
-            <img src="logo.jpg" alt="Union Glen" class="hero-logo">
+            <!-- Union Glen Logo SVG -->
+            <div class="hero-logo-container" style="margin-bottom: 2rem;">
+                <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" style="max-width: 300px; height: auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                    <!-- Union Glen Text Logo -->
+                    <text x="200" y="60" font-family="'Playfair Display', serif" font-size="48" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">UNION GLEN</text>
+                    <text x="200" y="95" font-family="'Inter', sans-serif" font-size="16" font-weight="300" fill="#C9A962" text-anchor="middle" letter-spacing="6" style="text-transform: uppercase;">Unionville's Grand Vision</text>
+                    <line x1="100" y1="115" x2="300" y2="115" stroke="#C9A962" stroke-width="2"/>
+                </svg>
+            </div>
             <p class="hero-subtitle">Coming Early 2026</p>
-            <h1>Union Glen</h1>
+            <h1>Freehold Townhomes</h1>
             <p class="hero-location">Kennedy & Major Mackenzie, Markham</p>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Unionville's Signature Community</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Register for VIP Access to Floor Plans & Pricing</p>
             <a href="#register" class="cta-button">Register Now</a>
         </div>
         <div class="scroll-indicator"><a href="#register" style="color: inherit; text-decoration: none;">Scroll to register ↓</a></div>
@@ -762,6 +883,64 @@
         </div>
     </section>
 
+    <!-- Floor Plans Section -->
+    <section class="floorplans" id="floorplans">
+        <div class="section-header">
+            <h2>Floor Plans</h2>
+            <p>Four distinct townhome collections designed for modern living</p>
+        </div>
+        <div class="floorplans-grid">
+            <div class="floorplan-card locked">
+                <div class="floorplan-preview">
+                    <div class="floorplan-icon">🏘️</div>
+                    <h3>Classic Towns</h3>
+                    <p>Traditional elegance with modern amenities</p>
+                </div>
+                <div class="floorplan-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Floor Plans</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
+            </div>
+            <div class="floorplan-card locked">
+                <div class="floorplan-preview">
+                    <div class="floorplan-icon">🚗</div>
+                    <h3>Tandem Garage</h3>
+                    <p>Smart design with rear laneway access</p>
+                </div>
+                <div class="floorplan-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Floor Plans</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
+            </div>
+            <div class="floorplan-card locked">
+                <div class="floorplan-preview">
+                    <div class="floorplan-icon">🏡</div>
+                    <h3>Double Garage</h3>
+                    <p>Premium homes with double garage access</p>
+                </div>
+                <div class="floorplan-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Floor Plans</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
+            </div>
+            <div class="floorplan-card locked">
+                <div class="floorplan-preview">
+                    <div class="floorplan-icon">🌳</div>
+                    <h3>Courtyard Towns</h3>
+                    <p>Private courtyards with serene outdoor spaces</p>
+                </div>
+                <div class="floorplan-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Floor Plans</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Registration Form Section -->
     <section class="registration" id="register">
         <div class="registration-container">
@@ -788,9 +967,7 @@
                 <span class="trust-item">✓ No Obligation</span>
             </div>
 
-            <div class="builders-logo-section">
-                <img src="builders.jpg" alt="Union Glen 7 Award-Winning Builders" class="builders-form-logo">
-            </div>
+
         </div>
     </section>
 
