@@ -399,38 +399,46 @@
         /* Registration Form */
         .registration {
             padding: 5rem 2rem;
-            background: var(--dark);
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
             color: var(--white);
-        }
-
-        .registration-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .registration h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        .registration-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 2.5rem;
-        }
-
-        .cognito-form-container {
-            background: var(--charcoal);
-            padding: 2rem;
-            border-radius: 12px;
-            max-width: 600px;
-            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
         }
         
-        .cognito-form-container iframe {
-            border-radius: 8px;
+        .registration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .registration-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .registration h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .registration-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+            width: 100% !important;
+            min-height: 800px;
         }
 
         .form-row {
