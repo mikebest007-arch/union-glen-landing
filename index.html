@@ -935,6 +935,74 @@
             }
         }
 
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .gallery-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-icon {
+            font-size: 4rem;
+        }
+
+        .gallery-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .gallery-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .gallery-content p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .footer-logo {
             height: 80px;
             width: auto;
@@ -1168,6 +1236,52 @@
                     <div class="lock-icon">🔒</div>
                     <p class="lock-text">Register to Access Floor Plans</p>
                     <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section - Four Attractive Categories -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <h2>Gallery</h2>
+            <p>Explore the exceptional living experience at Union Glen</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="gallery-icon">🏛️</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Exterior Architecture</h3>
+                    <p>Stunning contemporary designs with premium finishes and timeless elegance</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="gallery-icon">✨</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Interior Living Spaces</h3>
+                    <p>Open-concept layouts designed for modern family life and entertaining</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="gallery-icon">🌳</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Community Amenities</h3>
+                    <p>Parks, trails, and recreational spaces for an active outdoor lifestyle</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="gallery-icon">🎯</div>
+                </div>
+                <div class="gallery-content">
+                    <h3>Prime Location</h3>
+                    <p>Steps from Angus Glen Golf Club, top schools, and major highways</p>
                 </div>
             </div>
         </div>
