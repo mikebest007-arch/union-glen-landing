@@ -871,6 +871,58 @@
             box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
         }
 
+        .download-card.locked {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 26, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 1.5rem;
+        }
+
+        .download-card.locked:hover .download-overlay {
+            opacity: 1;
+        }
+
+        .download-overlay .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-overlay .lock-text {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .download-overlay .unlock-btn {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-overlay .unlock-btn:hover {
+            background: var(--gold-light);
+            transform: scale(1.05);
+        }
+
         @media (max-width: 1024px) {
             .downloads-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1095,20 +1147,28 @@
     <section class="downloads" id="downloads">
         <div class="section-header">
             <h2>Project Documents</h2>
-            <p>Download official site plan and floor plans</p>
+            <p>Register for VIP access to download official site plan and floor plans</p>
         </div>
         <div class="downloads-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px;">
-            <div class="download-card">
+            <div class="download-card locked">
                 <div class="download-icon">📍</div>
                 <h3>Site Plan</h3>
                 <p>Complete community layout and lot locations</p>
-                <a href="site-plan.pdf" target="_blank" class="download-btn">Download PDF</a>
+                <div class="download-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Site Plan</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
             </div>
-            <div class="download-card">
+            <div class="download-card locked">
                 <div class="download-icon">🏘️</div>
                 <h3>Floor Plans</h3>
                 <p>All available floor plans by collection type</p>
-                <a href="downloads/Floorplans/" target="_blank" class="download-btn">View Floor Plans</a>
+                <div class="download-overlay">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Register to Access Floor Plans</p>
+                    <a href="#register" class="unlock-btn">Register Now</a>
+                </div>
             </div>
         </div>
     </section>
