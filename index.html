@@ -1339,26 +1339,26 @@
             </div>
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="rendering-interior-2.jpg" alt="Master Bedroom" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="rendering-interior-2.jpg" alt="Kitchen & Dining" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="gallery-overlay">
                         <span>Interior</span>
                     </div>
                 </div>
                 <div class="gallery-content">
-                    <h3>Luxurious Primary Bedroom</h3>
-                    <p>Spacious sanctuary for rest and relaxation</p>
+                    <h3>Kitchen & Dining</h3>
+                    <p>Luxurious primary bedroom sanctuary</p>
                 </div>
             </div>
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="rendering-interior-3.jpg" alt="Kitchen & Dining" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="rendering-interior-3.jpg" alt="Master Retreat" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="gallery-overlay">
                         <span>Interior</span>
                     </div>
                 </div>
                 <div class="gallery-content">
-                    <h3>Gourmet Kitchen</h3>
-                    <p>Premium finishes with elegant design</p>
+                    <h3>Master Retreat</h3>
+                    <p>Gourmet kitchen with premium finishes</p>
                 </div>
             </div>
             <div class="gallery-card">
@@ -1448,103 +1448,8 @@
             </div>
 
             <div class="form-wrapper">
-                <form class="registration-form" action="https://formspree.io/f/xbdapgea" method="POST">
-                    <input type="hidden" name="_subject" value="New Union Glen VIP Registration">
-                    <input type="hidden" name="_next" value="thank-you.html">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First *</label>
-                            <input type="text" id="firstName" name="First" required placeholder="First name">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last *</label>
-                            <input type="text" id="lastName" name="Last" required placeholder="Last name">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone *</label>
-                            <input type="tel" id="phone" name="Phone" required placeholder="Phone number">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="Email" required placeholder="Email address">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label>*Are you a Realtor®? *</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="Realtor" value="Yes" required>
-                                <span>Yes</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="Realtor" value="No" required>
-                                <span>No</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="message">Tell us more about what type of home you are looking for.</label>
-                        <textarea id="message" name="Message" rows="3" placeholder="Share your preferences..."></textarea>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label>Type of home(s) you are interested?</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="HomeType" value="Townhome - 2BR">
-                                <span>Townhome - 2BR</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="HomeType" value="Townhome - 3BR">
-                                <span>Townhome - 3BR</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="HomeType" value="Detached - 36'">
-                                <span>Detached - 36'</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="HomeType" value="Detached - 45'">
-                                <span>Detached - 45'</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="HomeType" value="Detached - 50' or Larger">
-                                <span>Detached - 50' or Larger</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label>Price Range</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="PriceRange" value="1M - 1.3M">
-                                <span>1M - 1.3M</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="PriceRange" value="2M - Over 3M">
-                                <span>2M - Over 3M</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="PriceRange" value="1.3M - 1.5M">
-                                <span>1.3M - 1.5M</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="PriceRange" value="1.5M - 2M">
-                                <span>1.5M - 2M</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        Register
-                    </button>
-                </form>
+                <!-- HubSpot Form Container -->
+                <div id="hubspot-form-container"></div>
             </div>
 
             <div class="registration-trust">
@@ -1589,6 +1494,22 @@
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
     </style>
+
+    <!-- HubSpot Forms & Tracking -->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        // HubSpot Form Embed - Replace with your Portal ID and Form ID
+        hbspt.forms.create({
+            region: "na1",
+            portalId: "YOUR_PORTAL_ID",
+            formId: "YOUR_FORM_ID",
+            target: "#hubspot-form-container",
+            onFormSubmit: function($form) {
+                // Optional: Track conversion
+                console.log('Union Glen VIP Registration submitted');
+            }
+        });
+    </script>
 
     <script>
         // Smooth scroll for anchor links
