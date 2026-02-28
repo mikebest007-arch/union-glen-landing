@@ -3,234 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Union Glen VIP Registration</title>
-    <meta name="description" content="Thank you for registering for Union Glen VIP access.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Welcome to Union Glen | Registration Confirmed</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --gold: #C9A962;
             --gold-light: #E5D5A8;
+            --gold-dark: #A88B4A;
             --dark: #1A1A1A;
             --charcoal: #2D2D2D;
             --cream: #F8F6F1;
             --white: #FFFFFF;
+            --success: #22C55E;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--white);
-            line-height: 1.6;
+            background: linear-gradient(135deg, var(--cream) 0%, #f0ebe3 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--dark);
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
-
-        .thank-you-container {
-            max-width: 600px;
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        
+        .success-header {
             text-align: center;
-            padding: 3rem;
-        }
-
-        .logo {
-            width: 120px;
             margin-bottom: 2rem;
-            filter: brightness(0) invert(1);
         }
-
-        .checkmark {
-            width: 80px;
-            height: 80px;
-            background: var(--gold);
+        
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .success-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--success);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        
+        .success-badge::before {
+            content: '✓';
+            width: 20px;
+            height: 20px;
+            background: var(--success);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 40px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .next-steps {
-            background: var(--charcoal);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            text-align: left;
-        }
-
-        .next-steps h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .next-steps ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .next-steps li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .next-steps li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
+            font-size: 0.75rem;
             font-weight: bold;
         }
-
-        .share-section {
-            margin-top: 2rem;
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
-
-        .share-section h3 {
+        
+        .subtitle {
+            color: #666;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
+            line-height: 1.6;
         }
-
+        
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+        }
+        
+        .vip-benefits {
+            margin-bottom: 2rem;
+        }
+        
+        .vip-benefits h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .vip-benefits h2::before {
+            content: '👑';
+            font-size: 1.25rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--cream);
+            border-radius: 12px;
+            border: 1px solid rgba(201, 169, 98, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-color: rgba(201, 169, 98, 0.3);
+        }
+        
+        .benefit-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .benefit-content h3 {
+            font-size: 0.95rem;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .benefit-content p {
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.5;
+        }
+        
+        .share-section {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .share-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .share-section p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
         .share-buttons {
             display: flex;
-            justify-content: center;
             gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
-
+        
         .share-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
+            padding: 0.875rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-
+        
         .share-btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-
+        
+        .share-email {
+            background: var(--gold);
+            color: white;
+        }
+        
         .share-whatsapp {
             background: #25D366;
             color: white;
         }
-
-        .share-email {
-            background: var(--gold);
-            color: var(--dark);
+        
+        .share-copy {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
         }
-
-        .back-link {
-            display: inline-block;
+        
+        .cta-section {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: white;
+            padding: 1.125rem 2.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(201, 169, 98, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 98, 0.4);
+        }
+        
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
             margin-top: 2rem;
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        .contact-info {
-            margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(0,0,0,0.08);
         }
-
-        .contact-info p {
-            opacity: 0.7;
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
             font-size: 0.9rem;
-        }
-
-        .contact-info a {
-            color: var(--gold);
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item:hover {
+            color: var(--gold-dark);
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: #999;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+            }
+            
+            .share-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .contact-bar {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+        
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--gold);
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="thank-you-container">
-        <img src="logo.jpg" alt="Union Glen" class="logo">
+    <div class="confetti" id="confetti"></div>
+    
+    <div class="container">
+        <header class="success-header">
+            <img src="logo.jpg" alt="Union Glen" class="logo" onerror="this.style.display='none'">
+            <div class="success-badge">Registration Confirmed</div>
+            <h1>Welcome to Union Glen</h1>
+            <p class="subtitle">You're now on our exclusive VIP list. Get ready for priority access to Markham's most anticipated community.</p>
+        </header>
         
-        <div class="checkmark">✓</div>
-        
-        <h1>You're Registered!</h1>
-        <p class="subtitle">Welcome to the Union Glen VIP list. You're now first in line for exclusive updates.</p>
-        
-        <div class="next-steps">
-            <h2>What Happens Next</h2>
-            <ul>
-                <li>You'll receive a welcome email within 24 hours</li>
-                <li>Floor plans will be released to VIPs first (before public)</li>
-                <li>Pricing information sent exclusively to registered buyers</li>
-                <li>Invitation to VIP preview event (before public opening)</li>
-                <li>Priority selection when sales begin</li>
-            </ul>
-        </div>
-        
-        <div class="share-section">
-            <h3>Know someone who would love Union Glen?</h3>
-            <div class="share-buttons">
-                <a href="https://wa.me/?text=I%20just%20registered%20for%20VIP%20access%20to%20Union%20Glen%20-%20Unionville's%20new%20freehold%20townhome%20community!%20Register%20at%3A%20https%3A%2F%2Fmikebest007-arch.github.io%2Funion-glen-landing%2F" class="share-btn share-whatsapp" target="_blank">
-                    📱 Share on WhatsApp
-                </a>
-                <a href="mailto:?subject=Union%20Glen%20VIP%20Registration&body=I%20just%20registered%20for%20VIP%20access%20to%20Union%20Glen%20-%20Unionville's%20new%20freehold%20townhome%20community!%0A%0ARegister%20here%3A%20https%3A%2F%2Fmikebest007-arch.github.io%2Funion-glen-landing%2F" class="share-btn share-email">
-                    ✉️ Share via Email
+        <div class="card">
+            <div class="vip-benefits">
+                <h2>Your VIP Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📧</div>
+                        <div class="benefit-content">
+                            <h3>Confirmation Email</h3>
+                            <p>Check your inbox for registration details</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📋</div>
+                        <div class="benefit-content">
+                            <h3>Floor Plans First</h3>
+                            <p>Priority access to layouts and pricing</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🥂</div>
+                        <div class="benefit-content">
+                            <h3>VIP Events</h3>
+                            <p>Exclusive preview invitations</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔑</div>
+                        <div class="benefit-content">
+                            <h3>Early Access</h3>
+                            <p>Be first when sales open</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="share-section">
+                <h3>Know Someone Interested?</h3>
+                <p>Share Union Glen with friends and family who might love this community</p>
+                <div class="share-buttons">
+                    <a href="mailto:?subject=Check out Union Glen in Markham&body=I just registered for VIP updates on Union Glen - a new community of townhomes and detached homes in Markham. Thought you might be interested too! https://unionglen.com" class="share-btn share-email">
+                        <span>✉️</span> Email
+                    </a>
+                    <a href="https://wa.me/?text=I just registered for VIP updates on Union Glen - a new community in Markham! Check it out: https://unionglen.com" class="share-btn share-whatsapp" target="_blank">
+                        <span>💬</span> WhatsApp
+                    </a>
+                    <button class="share-btn share-copy" onclick="copyLink()">
+                        <span>📋</span> Copy Link
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="/" class="btn-primary">
+                    <span>←</span> Back to Website
                 </a>
             </div>
         </div>
         
-        <a href="index.html" class="back-link">← Back to Union Glen</a>
-        
-        <div class="contact-info">
-            <p>Questions? Contact us at <a href="mailto:condosunion@gmail.com">condosunion@gmail.com</a> or <a href="https://wa.me/16479678233">WhatsApp +1 (647) 967-8233</a></p>
+        <div class="contact-bar">
+            <a href="mailto:condosunion@gmail.com" class="contact-item">
+                <span>✉️</span> condosunion@gmail.com
+            </a>
+            <a href="tel:+14165551234" class="contact-item">
+                <span>📞</span> (416) 555-1234
+            </a>
+            <span class="contact-item">
+                <span>📍</span> Markham, Ontario
+            </span>
         </div>
+        
+        <p class="footer-note">
+            Union Glen · Premium Living in Markham<br>
+            <small>You can unsubscribe from updates at any time</small>
+        </p>
     </div>
     
-    <!-- Meta Pixel Code (add when ready) -->
-    <!--
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('track', 'Lead');
+        // Confetti animation
+        function createConfetti() {
+            const colors = ['#C9A962', '#E5D5A8', '#1A1A1A', '#22C55E'];
+            const container = document.getElementById('confetti');
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const piece = document.createElement('div');
+                    piece.className = 'confetti-piece';
+                    piece.style.left = Math.random() * 100 + '%';
+                    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    piece.style.animationDelay = Math.random() * 2 + 's';
+                    piece.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    container.appendChild(piece);
+                    
+                    setTimeout(() => piece.remove(), 5000);
+                }, i * 50);
+            }
+        }
+        
+        // Copy link function
+        function copyLink() {
+            const url = window.location.origin;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.querySelector('.share-copy');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span>✓</span> Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+        
+        // Run confetti on load
+        window.addEventListener('load', createConfetti);
     </script>
-    -->
 </body>
 </html>
