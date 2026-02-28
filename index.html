@@ -963,14 +963,43 @@
         }
 
         .gallery-image {
-            height: 180px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .gallery-icon {
-            font-size: 4rem;
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .gallery-content {
@@ -1241,47 +1270,59 @@
         </div>
     </section>
 
-    <!-- Gallery Section - Four Attractive Categories -->
+    <!-- Gallery Section - Four Renderings -->
     <section class="gallery" id="gallery">
         <div class="section-header">
             <h2>Gallery</h2>
-            <p>Explore the exceptional living experience at Union Glen</p>
+            <p>Experience the exceptional living at Union Glen through our renderings</p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-card">
-                <div class="gallery-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <div class="gallery-icon">🏛️</div>
+                <div class="gallery-image">
+                    <img src="hero.jpg" alt="Exterior Rendering" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="gallery-overlay">
+                        <span>Exterior Rendering</span>
+                    </div>
                 </div>
                 <div class="gallery-content">
                     <h3>Exterior Architecture</h3>
-                    <p>Stunning contemporary designs with premium finishes and timeless elegance</p>
+                    <p>Stunning contemporary designs with premium finishes</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <div class="gallery-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    <div class="gallery-icon">✨</div>
+                <div class="gallery-image">
+                    <img src="classic.jpg" alt="Interior Rendering" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="gallery-overlay">
+                        <span>Interior Rendering</span>
+                    </div>
                 </div>
                 <div class="gallery-content">
-                    <h3>Interior Living Spaces</h3>
-                    <p>Open-concept layouts designed for modern family life and entertaining</p>
+                    <h3>Interior Living</h3>
+                    <p>Open-concept layouts for modern family life</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <div class="gallery-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    <div class="gallery-icon">🌳</div>
+                <div class="gallery-image">
+                    <img src="courtyard.jpg" alt="Community Rendering" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="gallery-overlay">
+                        <span>Community Rendering</span>
+                    </div>
                 </div>
                 <div class="gallery-content">
-                    <h3>Community Amenities</h3>
-                    <p>Parks, trails, and recreational spaces for an active outdoor lifestyle</p>
+                    <h3>Community Spaces</h3>
+                    <p>Beautiful outdoor areas and courtyards</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <div class="gallery-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                    <div class="gallery-icon">🎯</div>
+                <div class="gallery-image">
+                    <img src="double.jpg" alt="Home Rendering" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="gallery-overlay">
+                        <span>Home Rendering</span>
+                    </div>
                 </div>
                 <div class="gallery-content">
-                    <h3>Prime Location</h3>
-                    <p>Steps from Angus Glen Golf Club, top schools, and major highways</p>
+                    <h3>Premium Homes</h3>
+                    <p>Double garage and tandem options</p>
                 </div>
             </div>
         </div>
