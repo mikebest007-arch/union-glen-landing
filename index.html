@@ -805,6 +805,84 @@
             }
         }
 
+        /* Downloads Section */
+        .downloads {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+        }
+
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .download-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .download-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .download-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--gold-light);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
+        }
+
+        @media (max-width: 1024px) {
+            .downloads-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .downloads-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .footer-logo {
             height: 80px;
             width: auto;
@@ -1009,6 +1087,34 @@
             </div>
             <div class="builder-logo-item" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
                 <img src="state-logo.png" alt="State Building Group" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:#1a1a1a; font-weight:bold;\'>STATE</span>';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section class="downloads" id="downloads">
+        <div class="section-header">
+            <h2>Project Documents</h2>
+            <p>Download official floor plans, site plan, and project information</p>
+        </div>
+        <div class="downloads-grid">
+            <div class="download-card">
+                <div class="download-icon">📍</div>
+                <h3>Site Plan</h3>
+                <p>Complete community layout and lot locations</p>
+                <a href="site-plan.pdf" target="_blank" class="download-btn">Download PDF</a>
+            </div>
+            <div class="download-card">
+                <div class="download-icon">🏘️</div>
+                <h3>Floor Plans</h3>
+                <p>All available floor plans by collection type</p>
+                <a href="downloads/Floorplans/" target="_blank" class="download-btn">View Floor Plans</a>
+            </div>
+            <div class="download-card">
+                <div class="download-icon">📋</div>
+                <h3>Broker Information</h3>
+                <p>Commission structure and closing dates</p>
+                <a href="broker-handout.pdf" target="_blank" class="download-btn">Download PDF</a>
             </div>
         </div>
     </section>

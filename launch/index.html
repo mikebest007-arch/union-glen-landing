@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Glen | Unionville's Grand Vision Community | Condos Union Realty</title>
+    <meta name="description" content="Limited release of freehold townhomes coming early 2026. Kennedy & Major Mackenzie, Markham. Register now for VIP access.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Union Glen | Unionville's Grand Vision Community">
+    <meta property="og:description" content="Limited release of freehold townhomes coming early 2026. Register now for VIP access.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="EXTERIORS FINAL/Deco_B03_ELV A_22'.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E5D5A8;
+            --dark: #1A1A1A;
+            --charcoal: #2D2D2D;
+            --cream: #F8F6F1;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 120px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-location {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-location::before {
+            content: "📍 ";
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.4);
+        }
+
+        .cta-button:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 98, 0.5);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Townhome Types Section */
+        .townhomes {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 169, 98, 0.1);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            border-color: rgba(201, 169, 98, 0.3);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .info-note {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: #666;
+        }
+
+        /* Builders Section */
+        .builders {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--white) 50%, var(--cream) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .builders::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(201, 169, 98, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(201, 169, 98, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .builders h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .builders-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .builders-banner {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            padding: 2.5rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .builders-banner::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .builders-main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .builders-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .builder-item {
+            text-align: center;
+            padding: 1.5rem 0.75rem;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .builder-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .builder-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-color: rgba(201, 169, 98, 0.3);
+        }
+
+        .builder-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .builder-item.featured {
+            background: linear-gradient(135deg, var(--white) 0%, #FDFCF8 100%);
+            border: 2px solid var(--gold);
+            box-shadow: 0 6px 25px rgba(201, 169, 98, 0.15);
+        }
+
+        .builder-item.featured::after {
+            content: '★';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 0.7rem;
+            color: var(--gold);
+        }
+
+        .builder-img {
+            width: 100%;
+            height: 50px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .builder-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1.5px;
+            padding: 0.4rem 0.6rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+            border: 1.5px solid var(--gold);
+            border-radius: 6px;
+            display: inline-block;
+            min-width: 90%;
+            text-align: center;
+        }
+
+        .builder-name {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 1024px) {
+            .builders-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .builders-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+                padding: 0 0.5rem;
+            }
+
+            .builder-item {
+                min-height: 140px;
+                padding: 1.25rem 0.5rem;
+            }
+
+            .builder-logo-text {
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 5rem 2rem;
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item:hover {
+            opacity: 0.8;
+        }
+
+        /* Registration Form - Clean & Readable */
+        .registration {
+            padding: 5rem 2rem;
+            background: var(--cream);
+            color: var(--dark);
+        }
+
+        .registration-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .registration-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.5rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .registration h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .registration-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .registration-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .registration-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .registration-benefit::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+        .form-wrapper {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 2px solid var(--gold);
+        }
+
+        .cognito-form-container {
+            background: var(--white);
+            border-radius: 8px;
+        }
+
+        .cognito-form-container iframe {
+            width: 100% !important;
+            min-height: 789px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .registration-trust {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .builders-logo-section {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .builders-form-logo {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.75rem;
+            color: #888;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            background: #1a1a1a;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            background: var(--cream);
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .registration {
+                padding: 3rem 1rem;
+            }
+
+            .form-wrapper {
+                padding: 1rem;
+                border-radius: 12px;
+            }
+
+            .cognito-form-container iframe {
+                min-height: 789px;
+            }
+
+            .registration-benefits {
+                gap: 0.75rem;
+            }
+
+            .registration-benefit {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .registration-trust {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .info-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero.jpg" alt="Union Glen Townhomes" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <img src="condos-union-logo.jpg" alt="Condos Union Realty Inc." style="height: 55px; width: auto; background: rgba(255,255,255,0.1); padding: 8px 12px; border-radius: 6px;">
+                <div style="width: 60px; height: 2px; background: var(--gold);"></div>
+            </div>
+            <img src="logo.jpg" alt="Union Glen" class="hero-logo">
+            <p class="hero-subtitle">Coming Early 2026</p>
+            <h1>Union Glen</h1>
+            <p class="hero-location">Kennedy & Major Mackenzie, Markham</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Unionville's Signature Community</p>
+            <a href="#register" class="cta-button">Register Now</a>
+        </div>
+        <div class="scroll-indicator"><a href="#register" style="color: inherit; text-decoration: none;">Scroll to register ↓</a></div>
+    </section>
+
+    <!-- Product Info -->
+    <section class="townhomes">
+        <div class="section-header">
+            <h2>Coming Early 2026</h2>
+            <p>Unionville's signature community with thoughtfully designed freehold townhomes</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">🏠</div>
+                <h3>Product</h3>
+                <p>Freehold Townhomes<br><span class="info-note">Coming First</span></p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Location</h3>
+                <p>Kennedy & Major Mackenzie<br><span class="info-note">Markham, ON</span></p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📅</div>
+                <h3>Launch</h3>
+                <p>Early 2026<br><span class="info-note">Register for Updates</span></p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">✨</div>
+                <h3>Status</h3>
+                <p>Coming Soon<br><span class="info-note">VIP Registration Open</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Community -->
+    <section class="features">
+        <div class="section-header">
+            <h2>The Community</h2>
+            <p>Union Glen is situated east of Kennedy Road between Major Mackenzie Drive and Elgin Mills</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🏛️</div>
+                <h3>Angus Glen Community Centre</h3>
+                <p>Modern amenities including library, swimming pool & conference centre just minutes away</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⛳</div>
+                <h3>Angus Glen Golf Club</h3>
+                <p>Premier golf course right across the street for leisure and recreation</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌲</div>
+                <h3>Bruce's Mill Conservation Park</h3>
+                <p>Beautiful nature trails and outdoor activities only 10 minutes away</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚗</div>
+                <h3>Easy Commute</h3>
+                <p>Close to York Region Transit, GO Transit, HWY 7, 407, and 404/DVP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Builders -->
+    <section class="builders">
+        <h2>7 Award-Winning Builders</h2>
+        <p class="builders-subtitle">GTA's most trusted names in homebuilding, united for Union Glen</p>
+        <div class="builders-banner">
+            <img src="builders.jpg" alt="Union Glen Builders - Arista, Deco, Opus" class="builders-main-image">
+        </div>
+        <div class="builders-grid">
+            <div class="builder-item featured">
+                <img src="builders.jpg" alt="Arista Homes" class="builder-img" style="object-position: 0% center;">
+                <span class="builder-name">Arista Homes</span>
+            </div>
+            <div class="builder-item featured">
+                <img src="builders.jpg" alt="Deco Homes" class="builder-img" style="object-position: 35% center;">
+                <span class="builder-name">Deco Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo-text">FIELDGATE</div>
+                <span class="builder-name">Fieldgate Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo-text">GREENPARK</div>
+                <span class="builder-name">Greenpark Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo-text">MADISON</div>
+                <span class="builder-name">Madison Group</span>
+            </div>
+            <div class="builder-item featured">
+                <img src="builders.jpg" alt="Opus Homes" class="builder-img" style="object-position: 70% center;">
+                <span class="builder-name">Opus Homes</span>
+            </div>
+            <div class="builder-item">
+                <div class="builder-logo-text">STATE</div>
+                <span class="builder-name">State Building Group</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration" id="register">
+        <div class="registration-container">
+            <div class="registration-badge">VIP Registration</div>
+            <h2>Secure Your Place at Union Glen</h2>
+            <p class="registration-subtitle">Join our exclusive VIP list for early access to floor plans, pricing, and priority unit selection</p>
+
+            <div class="registration-benefits">
+                <span class="registration-benefit">Early Floor Plan Access</span>
+                <span class="registration-benefit">Priority Selection</span>
+                <span class="registration-benefit">Exclusive Pricing</span>
+            </div>
+
+            <div class="form-wrapper">
+                <div class="cognito-form-container">
+                    <iframe src="https://www.cognitoforms.com/f/N04ysS1wiEGEw7_RBmwPQg/53" allow="payment" height="800"></iframe>
+                    <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+                </div>
+            </div>
+
+            <div class="registration-trust">
+                <span class="trust-item">🔒 SSL Secure</span>
+                <span class="trust-item">📧 Instant Confirmation</span>
+                <span class="trust-item">✓ No Obligation</span>
+            </div>
+
+            <div class="builders-logo-section">
+                <img src="builders.jpg" alt="Union Glen 7 Award-Winning Builders" class="builders-form-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="condos-union-logo.jpg" alt="Condos Union Realty Inc." class="footer-logo">
+            <div class="footer-contact">
+                <a href="https://wa.me/16479678233" class="contact-link" target="_blank">
+                    💬 WhatsApp: +1 (647) 967-8233
+                </a>
+                <a href="mailto:condosunion@gmail.com" class="contact-link">
+                    ✉️ condosunion@gmail.com
+                </a>
+            </div>
+            <p class="footer-disclaimer">
+                *We do not represent the builder. Prices & specifications subject to change without notice. 
+                Renderings are artist interpretation only. E.&O.E.<br>
+                By registering, you agree to receive emails and updates from Condos Union Realty.<br>
+                © 2026 Union Glen | Condos Union Realty Inc., Brokerage.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
